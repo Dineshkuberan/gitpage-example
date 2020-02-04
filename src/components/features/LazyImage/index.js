@@ -1,7 +1,6 @@
 import React from 'react';
+import {spinner} from './spinner'
 
-
-const unloadedSrc = '';
 export default class LazyImage extends React.Component {
     constructor(props) {
       super(props);
@@ -31,13 +30,13 @@ export default class LazyImage extends React.Component {
         return <img
           className={this.props.className}
           style={this.props.style}
-          src="Loader.gif"
+          src={spinner}
           alt={this.props.alt} />
       } else if (!this.state.loaded) {
         return <img
           className={this.props.className}
           style={this.props.style}
-          src="Loader.gif"
+          src={spinner}
           alt={this.props.alt} />
       }
       return <img
